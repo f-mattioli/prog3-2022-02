@@ -20,10 +20,11 @@
 			<br/><br/>
 			
 			<p:commandButton value="Enviar"
+				action="#{indexView.atualizaMensagem}"
 				update="@form" />
 			
 			<h:panelGroup rendered="#{indexView.nome != null}">
-				<p>#{indexView.mensagem}!</p>
+				<p>#{indexView.mensagem} #{indexView.nome}! Seja bem vindo(a)!</p>
 			</h:panelGroup>
 			
 			<hr/>
