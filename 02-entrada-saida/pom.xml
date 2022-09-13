@@ -6,12 +6,12 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.edu.facthus</groupId>
-	<artifactId>hello</artifactId>
+	<artifactId>02-entrada-saida</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<packaging>war</packaging>
-	<name>hello</name>
-	<description>Hello</description>
+	<name>02-entrada-saida</name>
+	<description>Exemplo Entrada/Saída</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,6 +32,13 @@
 			<artifactId>javaee-web-api</artifactId>
 			<version>${version.javaee.api}</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
+		<dependency>
+    		<groupId>org.primefaces</groupId>
+    		<artifactId>primefaces</artifactId>
+    		<version>8.0</version>
 		</dependency>
 	</dependencies>
 
