@@ -12,20 +12,15 @@
 	<h:body>
 		<h3>Facelets e Backing Beans</h3>
 
-		<h:form>
-			Mensagem: 
-			<h:inputText id="entrada" 
-				value="#{indexView.mensagem}" />
+		<h:link value="Aula" outcome="aula" />
+		<br/><br/>
 
-			<h:commandButton value="Enviar"
-				action="#{indexView.atualizaMensagem}">
+		<h:link value="Exercício 01" outcome="exercicio01" />
+		<br/><br/>
+		
+		<h:link value="Exercício 02 (a)" outcome="exercicio02a" />
+		<br/><br/>
 
-				<f:ajax execute="entrada"
-					render="saida" />
-			</h:commandButton>
-			
-			<h:outputText id="saida"
-				value="#{indexView.texto}" />
-		</h:form>
+		<h:link value="Exercício 02 (b)" outcome="exercicio02b" />
 	</h:body>
 </html>

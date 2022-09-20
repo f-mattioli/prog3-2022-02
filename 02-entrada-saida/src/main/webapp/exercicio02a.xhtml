@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_BR" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:head>
+		<meta charset="utf-8" />
+		<title>Facelets/Backing Beans</title>
+	</h:head>
+
+	<h:body>
+		<h3>Exercício 02 (a)</h3>
+
+		<h:form>
+			N1: <h:inputText id="n1" 
+					value="#{exercicio02aView.n1}" />
+			<br/><br/>
+
+			N2: <h:inputText id="n2" 
+				value="#{exercicio02aView.n2}" />
+			<br/><br/>
+
+			<h:commandButton value="Soma"
+				action="#{exercicio02aView.soma}">
+
+				<f:ajax execute="n1 n2"
+					render="saida" />
+			</h:commandButton>
+			<br/><br/>
+
+			<h:commandButton value="Subtrai"
+				action="#{exercicio02aView.subtrai}">
+
+				<f:ajax execute="n1 n2"
+					render="saida" />
+			</h:commandButton>
+			<br/><br/>
+
+			<h:commandButton value="Multiplica"
+				action="#{exercicio02aView.multiplica}">
+
+				<f:ajax execute="n1 n2"
+					render="saida" />
+			</h:commandButton>
+			<br/><br/>
+
+			<h:commandButton value="Divide"
+				action="#{exercicio02aView.divide}">
+
+				<f:ajax execute="n1 n2"
+					render="saida" />
+			</h:commandButton>
+			<br/><br/>
+		
+			<h:outputText id="saida"
+				value="#{exercicio02aView.saida}" />
+		</h:form>
+	</h:body>
+</html>
