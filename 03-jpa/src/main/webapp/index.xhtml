@@ -24,6 +24,33 @@
 			
 				<f:ajax execute="@form" render="@form" />
 			</h:commandButton>
+			<br/><br/>
+
+			<h:commandButton value="Listar"
+				action="#{indexView.lista()}">
+			
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			<br/><br/>
+
+			<h:dataTable value="#{indexView.contatos}" 
+				var="contato">
+
+				<h:column>    				
+					<f:facet name="header">Id</f:facet>    				
+					#{contato.id}
+				</h:column>
+
+				<h:column>    				
+					<f:facet name="header">Nome</f:facet>    				
+					#{contato.nome}
+				</h:column>
+
+				<h:column>    				
+					<f:facet name="header">Email</f:facet>    				
+					#{contato.email}
+				</h:column>
+			</h:dataTable>
 		</h:form>
 	</h:body>
 </html>
